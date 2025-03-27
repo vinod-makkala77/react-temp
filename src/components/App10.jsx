@@ -7,9 +7,9 @@ export default function App10() {
 
   useEffect(() => {
     if (numref.current>num) {
-      txtRef.current.style.color = 'green';
-    } else {
       txtRef.current.style.color = 'red';
+    } else {
+      txtRef.current.style.color = 'green';
     }
     numref.current=num;
   }, [num]);
@@ -17,7 +17,7 @@ export default function App10() {
   return (
     <div>
       <input type="number" onChange={(e) => setNum(Number(e.target.value))} />
-      <h1 ref={txtRef}>{num}</h1>
+      <h1 ref={txtRef}>{numref.current}-{num}</h1>
     </div>
   );
 }
